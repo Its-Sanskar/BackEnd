@@ -2,11 +2,11 @@
 import express from "express";
 import cors from "cors";
 import "dotenv/config.js";
-
+const port= process.env.PORT || 8080
 const app = express();
 app.use(express.static("public"));
 
-app.use(cors({ origin: "http://127.0.0.1:5500" }));
+app.use(cors());
 const devData = (name) => {
   return { name: name, age: 21, city: "Chhindwara" };
 };
@@ -23,6 +23,6 @@ app.get("/blog", (req, res) => {
   );
 });
 
-app.listen(process.env.PORT, () => {
+app.listen(port, () => {
   console.log("server is live");
 });

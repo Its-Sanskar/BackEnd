@@ -12,7 +12,7 @@ app.use(express.static("public"));
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.send("hello World , <h1>this is Home page</h2> <a href=/blogs>Blogs</a>");
+  res.send("hello World , <h1>this is Home page</h2> <h2>Welcome,to the bloger</h2> <a href=/blogs>Blogs</a>");
 });
 
 app.get("/users", (req, res) => {
